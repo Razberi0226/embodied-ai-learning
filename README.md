@@ -7,6 +7,19 @@
 | 课次 | 主题 | 内容 |
 |---|---|---|
 | [第 01 课](lessons/01-td/README.md) | TD(0) 状态价值预测 | 奖励与回报、TD 目标、更新顺序、学习率、折扣、终止状态 |
+| [第 02 课](lessons/02-mc/README.md) | MC、增量平均与固定学习率 | 实际完整回报、MC 与 TD、1/n 更新、随机回报与公平对照 |
+
+## 第 02 课怎么学
+
+1. 阅读[讲义](lessons/02-mc/README.md)，区分实际回报、期望价值和估计。
+2. 完成[习题](lessons/02-mc/exercises.md)，再对照[参考解答](lessons/02-mc/answers.md)。
+3. 运行[MC 与 TD 对照实验](lessons/02-mc/experiments/mc_td_comparison.py)和[增量均值实验](lessons/02-mc/experiments/incremental_mean.py)，保留预测与输出。
+4. 阅读[学习记录](lessons/02-mc/learning-notes.md)，复习目标选择、样本数与波动来源。
+
+```bash
+python lessons/02-mc/experiments/mc_td_comparison.py
+python lessons/02-mc/experiments/incremental_mean.py
+```
 
 ## 第 01 课怎么学
 
