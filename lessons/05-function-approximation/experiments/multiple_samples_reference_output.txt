@@ -1,0 +1,65 @@
+第05课导师参考输出｜2026-10-30
+
+以下由导师在本地实际运行完整脚本得到，不计作用户已运行或已掌握。
+本实验完全确定，无随机seed；每组默认40次batch updates、每次3个samples。
+请先写自己的预测，再读结果。
+
+A. One-sample vs batch: start from the SAME old weights
+old weights= (1.0, 1.0) errors= [0.0, -1.0] pair_loss= 0.25
+one_sample weights= (1.2, 1.2) errors= [0.2, -0.6] pair_loss= 0.1
+batch weights= (1.1, 1.1) errors= [0.1, -0.8] pair_loss= 0.1625
+
+B. Core experiment: only alpha changes
+
+wide alpha=0.05 N=3 updates=40
+update       train_loss      w1          w0
+     0        1.8333333           0           0
+     1        1.6971759   0.0666667        0.05
+     5        1.2493303     0.31184    0.226219
+    20       0.40782072    0.984769    0.641514
+    40      0.096785185     1.48465    0.871488
+eval_RMSE=0.70936139 sample_uses=120 status=budget_complete
+eval_predictions: [0.129161, 1.613814, 3.840794]
+
+wide alpha=0.2 N=3 updates=40
+update       train_loss      w1          w0
+     0        1.8333333           0           0
+     1        1.3214815    0.266667         0.2
+     5       0.37244405     1.02211     0.67232
+    20     0.0044218054     1.88569    0.988471
+    40    1.4235601e-05     1.99347    0.999867
+eval_RMSE=0.0080744019 sample_uses=120 status=budget_complete
+eval_predictions: [0.003134, 1.996601, 4.986801]
+
+wide alpha=2.2 N=3 updates=40
+update       train_loss      w1          w0
+     0        1.8333333           0           0
+     1        1.0103704     2.93333         2.2
+     5        3.0965214     2.04427     3.48832
+    20        734.88578           2    -37.3376
+    40        1080114.2           2    -1468.77
+eval_RMSE=1469.7716 sample_uses=120 status=budget_complete
+eval_predictions: [-1469.771568, -1467.771568, -1464.771568]
+
+C. Coverage extension: only training positions change
+Same alpha=.2, initialization, N=3, updates=40, evaluation positions.
+
+wide alpha=0.2 N=3 updates=40
+update       train_loss      w1          w0
+     0        1.8333333           0           0
+     1        1.3214815    0.266667         0.2
+     5       0.37244405     1.02211     0.67232
+    20     0.0044218054     1.88569    0.988471
+    40    1.4235601e-05     1.99347    0.999867
+eval_RMSE=0.0080744019 sample_uses=120 status=budget_complete
+eval_predictions: [0.003134, 1.996601, 4.986801]
+
+narrow alpha=0.2 N=3 updates=40
+update       train_loss      w1          w0
+     0       0.51333333           0           0
+     1        0.3332978  0.00266667         0.2
+     5       0.06684371   0.0132978     0.67232
+    20      0.012706864   0.0526632    0.988471
+    40      0.011983492     0.10394    0.999867
+eval_RMSE=2.3222626 sample_uses=120 status=budget_complete
+eval_predictions: [0.947897, 1.051837, 1.207746]

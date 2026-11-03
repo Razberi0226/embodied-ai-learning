@@ -8,6 +8,19 @@
 |---|---|---|
 | [第 01 课](lessons/01-td/README.md) | TD(0) 状态价值预测 | 奖励与回报、TD 目标、更新顺序、学习率、折扣、终止状态 |
 | [第 02 课](lessons/02-mc/README.md) | MC、增量平均与固定学习率 | 实际完整回报、MC 与 TD、1/n 更新、随机回报与公平对照 |
+| [第 03 课](lessons/03-n-step-td/README.md) | n-step TD、MC 与公平比较 | 二步与 n-step target、提前终止、完整 trajectory、多 seed 比较与 RMSE 的统计维度 |
+| [第 04 课](lessons/04-sarsa-q-learning/README.md) | Sarsa、Expected Sarsa、Q-learning 与 exploration | action value、三种 TD target、on/off-policy、training 与 greedy evaluation、ε 安排与数据覆盖 |
+| [第 05 课](lessons/05-function-approximation/README.md) | 从 table 到 function | 共享 parameters、gradient step、batch 更新、learning rate 稳定范围、sampling coverage 与 evaluation、semi-gradient TD |
+
+## 第 03—05 课怎么学
+
+每课的 README 列出了学习顺序：先读 `notes/` 里的讲义，再运行 `experiments/` 里的脚本，最后对照 `learning-notes/` 里的作答记录。练习版脚本未补全时只会打印提示，旁边有对应的已检查版或可运行版。
+
+```bash
+python lessons/03-n-step-td/experiments/full_trajectory_comparison_runnable.py
+python lessons/04-sarsa-q-learning/experiments/on_off_policy_two_step.py
+python lessons/05-function-approximation/experiments/multiple_samples_experiment.py
+```
 
 ## 第 02 课怎么学
 
