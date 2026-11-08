@@ -11,15 +11,21 @@
 | [第 03 课](lessons/03-n-step-td/README.md) | n-step TD、MC 与公平比较 | 二步与 n-step target、提前终止、完整 trajectory、多 seed 比较与 RMSE 的统计维度 |
 | [第 04 课](lessons/04-sarsa-q-learning/README.md) | Sarsa、Expected Sarsa、Q-learning 与 exploration | action value、三种 TD target、on/off-policy、training 与 greedy evaluation、ε 安排与数据覆盖 |
 | [第 05 课](lessons/05-function-approximation/README.md) | 从 table 到 function | 共享 parameters、gradient step、batch 更新、learning rate 稳定范围、sampling coverage 与 evaluation、semi-gradient TD |
+| [第 06 课](lessons/06-target-network/README.md) | 更新分布与 target network | update distribution 与 TD-Linear 稳定性、trace/det 判断、deadly triad、target network 的作用与限制、PPO critic 对照 |
+| [第 07 课](lessons/07-policy-gradient/README.md) | policy gradient（REINFORCE） | softmax policy、∇J 与 ∇ln π、REINFORCE、on-policy 抽样、reward offset 与 baseline、PPO actor 对照 |
 
-## 第 03—05 课怎么学
+第 06 课起，课内讲义改用繁体中文，专业术语仍用英文。
 
-每课的 README 列出了学习顺序：先读 `notes/` 里的讲义，再运行 `experiments/` 里的脚本，最后对照 `learning-notes/` 里的作答记录。练习版脚本未补全时只会打印提示，旁边有对应的已检查版或可运行版。
+## 第 03—07 课怎么学
+
+每课的 README 列出了学习顺序：先读 `notes/` 里的讲义，再运行 `experiments/` 里的脚本，最后对照学习记录（`learning-notes/` 或 `learning-notes.md`）。练习版脚本未补全时只会打印提示，旁边有对应的已检查版或可运行版。
 
 ```bash
 python lessons/03-n-step-td/experiments/full_trajectory_comparison_runnable.py
 python lessons/04-sarsa-q-learning/experiments/on_off_policy_two_step.py
 python lessons/05-function-approximation/experiments/multiple_samples_experiment.py
+python lessons/06-target-network/experiments/update_distribution_target_network.py
+python lessons/07-policy-gradient/experiments/policy_gradient_bandit.py
 ```
 
 ## 第 02 课怎么学
