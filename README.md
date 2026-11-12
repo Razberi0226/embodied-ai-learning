@@ -15,10 +15,11 @@
 | [第 07 课](lessons/07-policy-gradient/README.md) | policy gradient（REINFORCE） | softmax policy、∇J 与 ∇ln π、REINFORCE、on-policy 抽样、reward offset 与 baseline、PPO actor 对照 |
 | [第 08 课](lessons/08-actor-critic/README.md) | actor-critic（A2C） | state 相关的 baseline、advantage、critic 与 actor、TD advantage δ、critic 落后的偏差、TD 与 MC 的取舍、rsl_rl compute_returns 对照 |
 | [第 09 课](lessons/09-ppo/README.md) | PPO | 重复使用数据与 ratio、clip 与 min、batch／mini-batch／epoch、GAE 的 λ 与 critic 质量、完整 PPO 循环、rsl_rl 与 Isaac Lab 参数对照 |
+| [第 10 课](lessons/10-sac/README.md) | SAC | replay buffer 与 off-policy critic、maximization bias 与 twin Q、soft target、entropy 与温度 α、自动调 α、与 PPO 对照 |
 
 第 06 课起，课内讲义改用繁体中文，专业术语仍用英文。
 
-## 第 03—09 课怎么学
+## 第 03—10 课怎么学
 
 每课的 README 列出了学习顺序：先读 `notes/` 里的讲义，再运行 `experiments/` 里的脚本，最后对照学习记录（`learning-notes/` 或 `learning-notes.md`）。练习版脚本未补全时只会打印提示，旁边有对应的已检查版或可运行版。
 
@@ -30,6 +31,7 @@ python lessons/06-target-network/experiments/update_distribution_target_network.
 python lessons/07-policy-gradient/experiments/policy_gradient_bandit.py
 python lessons/08-actor-critic/experiments/actor_critic.py
 python lessons/09-ppo/experiments/ppo_clip_gae.py
+python lessons/10-sac/experiments/sac_twin_q_alpha.py
 ```
 
 ## 第 02 课怎么学
